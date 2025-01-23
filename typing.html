@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Test with Certificate</title>
+  <link rel="stylesheet" href="typing.css">
+</head>
+<body>
+  <div class="container">
+    <div class="speed">
+      <h1>Typing Speed Test</h1>
+      <div class="typing-box">
+        <p id="paragraph">
+          Practice typing to improve your speed and accuracy. "The quick brown fox jumps over the lazy dog."
+        </p>
+        <p>Time: <span id="time">0</span> seconds</p>
+      </div>
+      <textarea id="userInput" placeholder="Start typing here..." oninput="startTimer()"></textarea>
+      <div class="stats">
+        <p>Speed: <span id="speed">0</span> WPM</p>
+        <p>Accuracy: <span id="accuracy">0</span>%</p>
+      </div>
+    </div>
+    <div>
+      <button onclick="endTest()">Submit</button>
+      <button onclick="resetTest()">Reset</button>
+      <button onclick="askName()">Click to Enter Name</button>
+    </div>
+  </div>
+
+  <div class="certificate" style="display: none;" id="certificateSection">
+    <h2>Download Your Certificate</h2>
+    <input type="text" id="userName" placeholder="Enter Your Name" />
+    <button onclick="generateCertificate()">Generate Certificate</button>
+    <canvas id="certificateCanvas" width="800" height="600" style="display: none;"></canvas>
+    
+    <a id="downloadLink" style="display: none;" download="certificate.png">
+      <button>Download Certificate</button>
+    </a>
+  </div>
+
+  <script src="typing.js"></script>
+</body>
+</html> 
